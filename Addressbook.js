@@ -1,4 +1,4 @@
-/*Problem Statement UC4: Ability to find existing contact person using their name and edit*/
+/*Problem Statement UC5: Ability to find a person with name delete it from the array*/
 
 class ContactDetails {
     /**
@@ -185,4 +185,25 @@ function editContactDetails() {
         addContactDetails();
     }
 
+}
+
+function deleteContactDetails() {
+    /**
+     * method for delete the contact details using first name
+     */
+    let input = prompt("Enter first name");
+    let status = true;
+    for (let i = 0; i < contactList.length; i++) {
+        if (contactList[i].firstName == input) {
+            contactList.splice(i, 1);
+            status = false;
+            break;
+        }
+    }
+    if (status == true) {
+        console.log(input + " details not found");
+    }
+    else {
+        console.log(input + " details are deleted");
+    }
 }
