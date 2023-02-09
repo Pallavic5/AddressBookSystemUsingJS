@@ -1,4 +1,4 @@
-/*Problem Statement UC5: Ability to find a person with name delete it from the array*/
+/*Problem Statement UC6: Ability to find number of contacts in the address book - Use Reduce function to get the count*/
 
 class ContactDetails {
     /**
@@ -206,4 +206,12 @@ function deleteContactDetails() {
     else {
         console.log(input + " details are deleted");
     }
+}
+
+function countOfContacts() {
+    /**
+     * create method for print the total number of contacts in array
+     */
+    let count = contactList.length;
+    console.log("Cont of contact details : " + count);
 }
