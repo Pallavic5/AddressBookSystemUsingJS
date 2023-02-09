@@ -1,11 +1,5 @@
-/*Problem Statement UC2:  Ability to ensure Valid
-Contacts are added... - First Name and Last Name should start with
-Capital and Minimum 3 Characters
-- Address, City and State should also have
-minimum 4 characters
-- Zip, Phone and Email should be valid as done in
-the Pattern Exercise
-- Throw Error if the RegEx test fails*/
+/*Problem Statement UC3:  Ability to create a new Address Book
+array and add new Contacts to it*/
 
 class ContactDetails {
     /**
@@ -145,4 +139,51 @@ function email() {
         }
     }
     return input;
+}
+
+/**
+ * Create Array and ContactDetails Objects
+ */
+contactList = new Array();
+function addContactDetails() {
+    /**
+     * create method for ability to add contact details to address book
+     */
+    contact = new ContactDetails();
+    contact.firstName = firstName('first name');
+    contact.lastName = firstName('last name');
+    contact.address = address('Address');
+    contact.city = address('city');
+    contact.state = address('State');
+    contact.zip = zip();
+    contact.phoneNumber = phoneNumber();
+    contact.email = email();
+    contactList.push(contact)
+}
+function printContactDetails() {
+    /**
+     * create method for print the Address book contact details
+     */
+    console.log(contactList);
+}
+function editContactDetails() {
+    /**
+     * create method for edit the existing contact details
+     */
+    let input = prompt("Enter first name");
+    let status = true;
+    for (let i = 0; i < contactList.length; i++) {
+        if (contactList[i].firstName == input) {
+            contactList.splice(i, 1);
+            status = false;
+            break;
+        }
+    }
+    if (status == true) {
+        console.log(input + " details not found");
+    }
+    else {
+        addContactDetails();
+    }
+
 }

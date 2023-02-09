@@ -1,11 +1,5 @@
-<!--Problem Statement UC2:  Ability to ensure Valid
-Contacts are added... - First Name and Last Name should start with
-Capital and Minimum 3 Characters
-- Address, City and State should also have
-minimum 4 characters
-- Zip, Phone and Email should be valid as done in
-the Pattern Exercise
-- Throw Error if the RegEx test fails-->
+<!--Problem Statement UC3:  Ability to create a new Address Book
+array and add new Contacts to it-->
 
 !DOCTYPE html>
 <html lang="en">
@@ -13,10 +7,12 @@ the Pattern Exercise
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Addressbook</title>
 </head>
 <body>
     <script src="Addressbook.js"></script>
-    <button type="button" onclick="add.addDetails()">Add Contact Details</button>
+    <button type="button" onclick="add.addDetails()">Add Contact Details</button><br><br>
+    <button type="button" onclick="printDetails()">Print Contact Details</button>
+    <button type="button" onclick="editContactDetails()">Edit contact details</button>
 </body>
 </html>
